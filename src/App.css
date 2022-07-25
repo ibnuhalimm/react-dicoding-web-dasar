@@ -1,38 +1,692 @@
-.App {
-  text-align: center;
+.container {
+    width: 90%;
+    margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navigation {
+    border-bottom: 1px solid var(--color-white);
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+	background-color: var(--color-chinese-black);
+	color: var(--color-white);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-header .logo--link {
+    font-size: 1.5rem;
+    color: var(--color-red);
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.menu {
+    position: absolute;
+    top: 3.75rem;
+    bottom: 0;
+    left: -240px;
+    right: auto;
+    z-index: 99;
+    overflow: hidden;
+    width: 240px;
+    background-color: var(--color-chinese-black);
+    transition: all .3s ease-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu.open {
+    left: 0;
+    width: 100%;
+}
+
+.menu .menu--list {
+    display: block;
+    list-style: none;
+    padding: 1.25rem;
+}
+
+.menu--list li a {
+    display: block;
+    padding: .75rem 0rem;
+    text-decoration: none;
+    color: var(--color-white);
+    opacity: .8;
+    transition: all .5s ease-out;
+}
+
+.menu--list li a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.btn-collapse {
+    border: 1px solid transparent;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-white);
+}
+
+.btn-collapse .btn-collapse--icon {
+   width: 1.75rem;
+   height: 1.75rem;
+}
+
+.search-nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.search-nav--form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: .75rem;
+    border-radius: .25rem;
+    background-color: var(--color-white);
+}
+
+.search-nav--icon {
+    width: 1rem;
+    height: 1rem;
+    color: var(--color-auro-metal);
+}
+
+.search-nav--input {
+    margin-left: .5rem;
+    width: 100%;
+    border: 1px solid transparent;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-black);
+}
+
+.section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.section .section--header h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--color-red);
+}
+
+.section .section--body {
+    margin-top: 2rem;
+}
+
+
+/* Headline section */
+.headline {
+    padding-top: 1.25rem;
+    padding-bottom: 3rem;
+    background-color: var(--color-chinese-black);
+    color: var(--color-white);
+}
+
+.headline--inner {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.headline .post--link {
+    color: var(--color-white);
+}
+
+.headline--image {
+    height: 200px;
+}
+
+.headline--image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.headline--content {
+    margin-top: 1rem;
+}
+
+.post--tag,
+.post--date {
+    font-size: .75rem;
+}
+
+.post--tag {
+    padding: .25rem 1rem;
+    border-radius: 2rem;
+}
+
+.post--tag.flirt {
+    background-color: var(--color-flirt);
+    color: var(--color-white);
+}
+
+.post--tag.liberty {
+    background-color: var(--color-liberty);
+    color: var(--color-white);
+}
+
+.post--tag.auro-metal {
+    background-color: var(--color-auro-metal);
+    color: var(--color-white);
+}
+
+
+.post--date {
+    margin-left: 1rem;
+    opacity: .5;
+}
+
+.post--link {
+    display: block;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+.post--link:hover h1,
+.post--link:hover h2,
+.post--link:hover h3,
+.post--link:hover h4,
+.post--link:hover h5 {
+    text-decoration: underline;
+}
+
+.headline--header {
+    margin-top: 1.5rem;
+}
+
+.headline--header h1 {
+    font-size: 1.9rem;
+    line-height: 2.75rem;
+}
+
+.headline--body {
+    margin-top: .5rem;
+}
+
+.headline--body p {
+    line-height: 1.75rem;
+}
+
+
+/** Post Section */
+.post-list {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 3rem;
+}
+
+.post--image {
+    height: 200px;
+}
+
+.post--image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post--content {
+    margin-top: 1rem;
+}
+
+.post--link {
+    color: var(--color-chinese-black);
+}
+
+.post--header {
+    margin-top: 1rem;
+}
+
+
+.developer {
+    margin-top: 3rem;
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+.developer--avatar {
+    position: relative;
+    top: -2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5rem;
+    height: 5rem;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .25);
+    border-radius: .5rem;
+}
+
+.developer--avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.developer--profile {
+    text-align: center;
+    position: relative;
+    top: -1rem;
+}
+
+.developer--profile .developer--title {
+    font-size: 1.25rem;
+    font-weight: normal;
+    opacity: .75;
+}
+
+.developer--profile .developer--name {
+    margin-top: .5rem;
+    font-weight: bold;
+}
+
+.developer--social-media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.developer--social-media .developer--social-media-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    background-color: var(--color-white);
+    color: var(--color-chinese-black);
+}
+
+.developer--social-media-link svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all .3s ease-in-out;
+}
+
+.developer--social-media-link:hover svg {
+    opacity: .75;
+}
+
+.hearth {
+    color: var(--color-pink);
+}
+
+.footer {
+   padding-bottom: 2rem;
+   font-size: .75rem;
+   text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--color-red);
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    margin-bottom: .5rem;
+    color: #222;
+}
+
+
+
+.headline-detail {
+    padding-top: 1.25rem;
+    padding-bottom: 0rem;
+    height: 360px;
+    background-color: var(--color-chinese-black);
+    color: var(--color-white);
+}
+
+.headline-detail--inner {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.headline-detail--header h1 {
+    font-size: 1.9rem;
+    line-height: 2.75rem;
+}
+
+.headline-detail--metadata {
+    margin-top: 1rem;
+}
+
+.headline-detail--image {
+    margin-top: 1.5rem;
+    height: 200px;
+    position: relative;
+}
+
+.headline-detail--image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-detail {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.post-detail p {
+    line-height: 1.75rem;
+}
+
+.post-detail h2, h3, h4, h5 {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+.post-detail h2 {
+    font-size: 1.5rem;
+}
+
+.post-detail h3, h4, h5 {
+    font-size: 1.25rem;
+}
+
+aside .developer {
+    margin-bottom: 2.5rem;
+    border-radius: .5rem;
+}
+
+aside .developer--title {
+    margin-top: 0px;
+}
+
+
+.partners {
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+}
+
+.partners .partners--header {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.partners--header .partners--title {
+    margin-top: 0px;
+    font-size: 1.5rem;
+    color: var(--color-red);
+}
+
+.partners .partners--body {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.partners .partners--list {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.partners--item img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media screen and (min-width: 640px) {
+    .headline--image {
+        height: 300px;
+    }
+
+    .post-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .post--image {
+        height: 170px;
+    }
+
+    .headline-detail--image {
+        height: 300px;
+    }
+
+    .post-detail {
+        margin-top: 8.5rem;
+    }
+
+    .partners {
+        padding-bottom: 2.5rem;
+    }
+
+    .partners .partners--list {
+        width: 90%;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .navbar-header {
+        justify-content: start;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    .menu {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu.open {
+        left: auto;
+        width: auto;
+    }
+
+    .menu .menu--list {
+        padding: 0px;
+    }
+
+    .menu--list li {
+        display: inline-block;
+    }
+
+    .menu--list li a {
+        padding: 0rem .5rem 0rem .5rem;
+    }
+
+	.btn-collapse {
+		display: none;
+	}
+
+    .search-nav {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+
+    .headline {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .headline--inner {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .headline--image,
+    .headline--content {
+        width: 50%;
+    }
+
+    .headline--image {
+        height: 360px;
+    }
+
+    .headline-detail {
+        height: 285px;
+    }
+
+    .headline-detail .headline-detail--inner {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .headline-detail .headline-detail--content {
+        grid-column: 1 / span 7;
+    }
+
+    .headline-detail .headline-detail--header {
+        margin-top: 1rem;
+    }
+
+    .headline-detail--header h1 {
+        font-size: 2.5rem;
+        line-height: 3.25rem;
+    }
+
+    .headline-detail .headline-detail--image {
+        position: relative;
+        top: -4rem;
+        grid-column: 7 / span 6;
+        height: 200px;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .menu {
+        margin-left: 0px;
+    }
+
+	.menu--list li a {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .post-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .headline-detail {
+        height: 320px;
+    }
+
+    .headline-detail .headline-detail--content {
+        grid-column: 1 / span 6;
+    }
+
+    .headline-detail .headline-detail--header {
+        margin-top: 3rem;
+    }
+
+    .headline-detail .headline-detail--image {
+        top: 8rem;
+        grid-column: 8 / span 6;
+        height: 240px;
+    }
+
+    .post-detail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 4rem;
+    }
+
+    .post-detail article {
+        width: 63.33%;
+    }
+
+    .post-detail aside {
+        width: 33.33%;
+    }
+
+    .partners {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .partners .partners--body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .partners .partners--list {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+@media screen and (min-width: 1280px) {
+    .navigation {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .navbar-header,
+    .container {
+        max-width: 1200px;
+    }
+
+    .logo {
+        width: 16.33%;
+    }
+
+    .menu {
+        width: 83.67%;
+    }
+
+    .search-nav {
+        width: 320px;
+    }
+
+    .search-nav--form {
+        padding: .75rem;
+    }
+
+    .headline--inner {
+        max-width: 1200px;
+        gap: 5rem;
+    }
+
+    .post--image {
+        height: 200px;
+    }
+
+    .post-detail article {
+        width: 70%;
+    }
+
+    .post-detail aside {
+        width: 30%;
+    }
 }
