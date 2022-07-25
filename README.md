@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# ReactJS Version of Dicoding Web Dasar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Vanilla HTML, CSS, and Js is available at [Dicoding Web Dasar](https://github.com/ibnuhalimm/dicoding-web-dasar).
 
 ## Available Scripts
 
