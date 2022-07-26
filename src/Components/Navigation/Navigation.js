@@ -1,6 +1,13 @@
+import { useState } from 'react';
+import Burger from '../Icons/Burger';
+import Close from '../Icons/Close';
+import './Navigation.css';
 import NavItem from './NavItem';
 
+
 export default function Navigation() {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <header>
             <nav className="navigation">
@@ -11,7 +18,7 @@ export default function Navigation() {
                             Web Dev
                         </a>
                     </div>
-                    <div className="menu"
+                    <div className={`menu ${isOpen ? 'open' : ''}`}
                         id="__navigation-drawer">
                         <ul className="menu--list">
                             <NavItem href="/">
@@ -41,10 +48,12 @@ export default function Navigation() {
                             </div>
                         </div>
                     </div>
-                    <button className="btn-collapse" id="__button-burger">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="btn-collapse--icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M4 8h16M4 16h16" />
-                        </svg>
+                    <button className="btn-collapse"
+                        onClick={ () => setIsOpen(!isOpen) }>
+                        {isOpen
+                            ? <Close className="btn-collapse--icon" />
+                            : <Burger className="btn-collapse--icon" />
+                        }
                     </button>
                 </div>
             </nav>

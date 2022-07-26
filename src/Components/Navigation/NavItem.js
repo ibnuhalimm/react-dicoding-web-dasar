@@ -1,3 +1,6 @@
+import './Navigation.css';
+
+
 export default function NavItem(props) {
     return (
         <li>

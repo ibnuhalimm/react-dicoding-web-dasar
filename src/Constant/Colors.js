@@ -1,0 +1,9 @@
+export const RED = '#FF2D20';
+export const CHINESE_BLACK = '#141618';
+export const FLIRT = '#A40D77';
+export const WHITE = '#FFFFFF';
+export const OUTER_SPACE = '#30353C';
+export const LIBERTY = '#4662B2';
+export const BLACK = '#000000';
+export const AURO_METAL = '#6B7280';
+export const PINK = '#F56767';

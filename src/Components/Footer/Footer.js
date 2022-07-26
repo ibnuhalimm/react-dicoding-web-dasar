@@ -1,9 +1,10 @@
-import Github from "./Icons/Github";
-import Instagram from "./Icons/Instagram";
-import Linkedin from "./Icons/Linkedin";
-import Twitter from "./Icons/Twitter";
-import SocialMediaLink from "./SocialMediaLink";
-import avatar from "../Img/avatar.webp";
+import Github from "../Icons/Github";
+import Instagram from "../Icons/Instagram";
+import Linkedin from "../Icons/Linkedin";
+import Twitter from "../Icons/Twitter";
+import SocialMediaLink from "../SocialMediaLink";
+import avatar from "../../Img/avatar.webp";
+
 
 export default function Footer() {
     return (
