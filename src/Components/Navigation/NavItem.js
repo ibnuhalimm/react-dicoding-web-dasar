@@ -1,13 +1,14 @@
+import {Link} from 'react-router-dom';
 import './Navigation.css';
 
 
 export default function NavItem(props) {
     return (
         <li>
-            <a href={props.href}
-                className="menu--link">
+            <Link to={props.href}
+                className="menu-link">
                 {props.children}
-            </a>
+            </Link>
         </li>
     )
 }

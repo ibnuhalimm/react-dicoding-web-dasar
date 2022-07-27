@@ -2,15 +2,18 @@ import Navigation from '../Components/Navigation/Navigation';
 import Footer from '../Components/Footer/Footer';
 import image_1280_640 from '../Img/image_1280_640.jpeg';
 import PostItem from '../Components/PostItem/PostItem';
+import Header from '../Components/Header/Header';
 
 
 export default function HomePage() {
     return (
         <>
-            <Navigation/>
+            <Header>
+                <Navigation/>
+            </Header>
             <main>
                 <div id="content">
-                   <section className="headline">
+                    <section className="headline">
                         <div className="headline--inner">
                             <div className="headline--image">
                                 <img src={image_1280_640} alt="Headline" />

@@ -67,100 +67,8 @@
     line-height: 1.75rem;
 }
 
-
-.developer {
-    margin-top: 3rem;
-    background-color: var(--color-red);
-    color: var(--color-white);
-}
-
-.developer--avatar {
-    position: relative;
-    top: -2.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: 5rem;
-    height: 5rem;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, .25);
-    border-radius: .5rem;
-}
-
-.developer--avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: .5rem;
-}
-
-.developer--profile {
-    text-align: center;
-    position: relative;
-    top: -1rem;
-}
-
-.developer--profile .developer--title {
-    font-size: 1.25rem;
-    font-weight: normal;
-    opacity: .75;
-}
-
-.developer--profile .developer--name {
-    margin-top: .5rem;
-    font-weight: bold;
-}
-
-.developer--social-media {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding-bottom: 2rem;
-}
-
-.developer--social-media .developer--social-media-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 2rem;
-    background-color: var(--color-white);
-    color: var(--color-chinese-black);
-}
-
-.developer--social-media-link svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    transition: all .3s ease-in-out;
-}
-
-.developer--social-media-link:hover svg {
-    opacity: .75;
-}
-
 .hearth {
     color: var(--color-pink);
-}
-
-.footer {
-   padding-bottom: 2rem;
-   font-size: .75rem;
-   text-align: center;
-}
-
-.footer a {
-    text-decoration: none;
-    color: var(--color-red);
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-.footer p {
-    margin-bottom: .5rem;
-    color: #222;
 }
 
 
@@ -224,16 +132,6 @@
 .post-detail h5 {
     font-size: 1.25rem;
 }
-
-aside .developer {
-    margin-bottom: 2.5rem;
-    border-radius: .5rem;
-}
-
-aside .developer--title {
-    margin-top: 0px;
-}
-
 
 .partners {
     padding: 1.5rem;

@@ -1,0 +1,19 @@
+.footer {
+   padding-bottom: 2rem;
+   font-size: .75rem;
+   text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--color-red);
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    margin-bottom: .5rem;
+    color: #222;
+}
