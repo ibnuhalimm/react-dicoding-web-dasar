@@ -1,6 +1,9 @@
 # ReactJS Version of Dicoding Web Dasar
 
 Vanilla HTML, CSS, and Js is available at [Dicoding Web Dasar](https://github.com/ibnuhalimm/dicoding-web-dasar).
+It's a Refresher Project to Learn the Basic of ReactJS.
+
+---
 
 ## Available Scripts
 
@@ -44,9 +47,6 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-It's a Refresher Project to Learn the Basic of ReactJS.
-
----
 
 ### Code Splitting
 
